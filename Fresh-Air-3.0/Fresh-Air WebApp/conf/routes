@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page (redirect to the dashboard as the main feature of the app)
+GET     /                                       Dashboard.index
+
+# Dashboard page
+GET     /dashboard                              Dashboard.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Serve static assets (e.g., CSS, JS, images) from the /public folder
+GET     /public/                                staticDir:public
+
+# Catch-all route for other controller actions
+*       /{controller}/{action}                  {controller}.{action}

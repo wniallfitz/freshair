@@ -1,0 +1,25 @@
+<div class="content box">
+  <h2 class="title is-4">Sensor Data</h2>
+  <table class="table is-striped">
+    <thead>
+    <tr>
+      <th>Temperature (°C)</th>
+      <th>Humidity (%)</th>
+      <th>Pressure (hPa)</th>
+      <th>Dew Point (°C)</th>
+      <th>Condensation Risk</th>
+      <th>Last Updated</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>${reading != null ? reading.temperature : "No data"}</td>
+      <td>${reading != null ? reading.humidity : "No data"}</td>
+      <td>${reading != null ? reading.pressure : "No data"}</td>
+      <td>${reading != null ? reading.dewPoint : "No data"}</td>
+      <td>${reading != null ? (reading.condensationRisk == 1 ? "Yes" : "No") : "No data"}</td>
+      <td>${reading != null ? reading.timestamp : "No data"}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

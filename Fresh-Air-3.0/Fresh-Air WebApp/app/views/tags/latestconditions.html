@@ -1,0 +1,34 @@
+<div class="columns is-8">
+    <div class="column ">
+        <div class=" box has-background-black has-text-white">
+            <h3 class="has-text-white">${_station.name}</h3> <br>
+        </div>
+    </div>
+    <div class="column ">
+        <div class=" box has-background-black has-text-white">
+            <h3 class="has-text-white">Weather</h3> <br>
+            ${_station.getLatestCode()}
+        </div>
+    </div>
+    <div class="column ">
+        <div class=" box has-background-black has-text-white">
+            <h3 class="has-text-white">Temp</h3> <br>
+            ${_station.getLatestTemperature()} C <br>
+            ${_station.getLatestFahrenheit()} F
+        </div>
+    </div>
+    <div class="column ">
+        <div class=" box has-background-black has-text-white">
+            <h3 class="has-text-white">Wind</h3> <br>
+            ${_station.getLatestWindSpeed()} bft <br>
+            ${_station.getLatestWindCompassDirection()} <br>
+            <em>Feels Like </em>${_station.getLatestWindChill()}
+        </div>
+    </div>
+    <div class="column ">
+        <div class=" box has-background-black has-text-white">
+            <h3 class="has-text-white">Pressure</h3> <br>
+            ${_station.getLatestPressure()} hpa
+        </div>
+    </div>
+</div>
